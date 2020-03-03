@@ -1,4 +1,4 @@
-package com.mock.creator.model;
+package com.mock.creator;
 
 import com.github.javafaker.Faker;
 import org.springframework.util.ReflectionUtils;
