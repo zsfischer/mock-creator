@@ -1,6 +1,7 @@
 package com.mock.creator;
 
 import com.github.javafaker.Faker;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.ReflectionUtils;
 
 import java.lang.reflect.Field;
@@ -39,7 +40,8 @@ public class MockGenerator
         }
         catch (Exception e)
         {
-            System.out.println("Hiba új instance létrehozásánál!");
+            System.err.println("Error while creating new instance from " + clazz);
+            e.printStackTrace();
             return null;
         }
 

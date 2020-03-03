@@ -8,10 +8,10 @@
 		<version>2.2.5.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.faker.example</groupId>
-	<artifactId>faker</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>faker</name>
+	<groupId>com.fischer.zsolt</groupId>
+	<artifactId>mock-creator</artifactId>
+	<version>0.0.1</version>
+	<name>mock-creator</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
