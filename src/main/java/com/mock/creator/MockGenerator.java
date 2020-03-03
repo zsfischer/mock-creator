@@ -30,7 +30,7 @@ public class MockGenerator
         random = new Random();
     }
 
-    public <T> T generateFakeValues(Class<T> clazz)
+    public <T> T generateMockObject(Class<T> clazz)
     {
         Object t;
         try
@@ -51,33 +51,6 @@ public class MockGenerator
         {
             fields = parentClass.getDeclaredFields();
             goThroughField(fields, t, new ArrayList<>());
-            parentClass = parentClass.getSuperclass();
-        }
-
-        return (T) t;
-    }
-
-    public <T> T generateFakeValuesWithException(Class<T> clazz, List<String> fieldNames)
-    {
-        Object t;
-        try
-        {
-            t = clazz.getDeclaredConstructor().newInstance();
-        }
-        catch (Exception e)
-        {
-            System.out.println("Error while trying to create new instance from " + clazz);
-            return null;
-        }
-
-        Field[] fields = clazz.getDeclaredFields();
-        goThroughField(fields, t, fieldNames);
-
-        Class parentClass = clazz.getSuperclass();
-        while (parentClass != null)
-        {
-            fields = parentClass.getDeclaredFields();
-            goThroughField(fields, t, fieldNames);
             parentClass = parentClass.getSuperclass();
         }
 
