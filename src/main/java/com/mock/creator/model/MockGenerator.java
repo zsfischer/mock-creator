@@ -19,12 +19,12 @@ import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 
-public class FakerGenerator
+public class MockGenerator
 {
     private Faker faker;
     private Random random;
 
-    public FakerGenerator()
+    public MockGenerator()
     {
         this.faker = new Faker();
         random = new Random();
